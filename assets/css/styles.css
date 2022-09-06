@@ -1,0 +1,735 @@
+body{
+    background: rgb(50, 48, 48);
+}
+
+#container .title{
+  color: orange;
+  margin-left: 380px;
+  margin-top: 30px;
+}
+
+#container #header{
+  margin: 27px 0px 0px 304px;
+}
+
+#header ul{
+  text-align: center;
+}
+
+.ul-menu > li > a{
+  text-decoration: none;
+  color: #3aa93a;
+  transition: all 300ms;
+}
+.ul-menu li a:hover{
+  background:orange;
+  font-weight: bold;
+}
+
+.success{
+    color: green;
+    font-weight: bold;
+}
+
+.failed{
+    color: red;
+    font-weight: bold;
+}
+
+.image-portada{
+
+  border: 2px solid #ffa700;
+  width: 506px;
+  height: auto;
+  border-radius: 2px;
+  margin: 50px 0px 0px 370px;
+}
+
+.pfr-span{
+    color: green;
+    font-weight: bold;
+}
+
+.image-portada img{
+    width: 502px;   
+}
+
+#header{    
+    width: 60%;
+    margin: 27px 0px 0px 304px;
+}
+
+.div-footer{
+  color:#3aa93a ;  
+  margin-left: 400px;
+  margin-top: auto;
+}
+
+
+
+.ul-menu  li{
+    display: inline-block;
+    margin-right: 60px;
+}
+
+
+/*register form*/
+
+.register-user-title{
+  color: #dfd57e;
+  margin: 31px 0px 0px 428px;
+}
+
+.client-register-form{
+    width: 100%;
+    margin: 20px 0px 0px 395px;
+}
+
+.client-register-form  div  label{
+  color: #dfd57e;
+}
+
+.register-form{
+    width: 25%;
+    margin: 0px 0px 0px 48px;
+}
+
+.register-form button{
+  margin: 22px 0px 31px 128px;
+}
+
+/*modal*/
+
+a.selected{
+    background-color:#1F75CC;
+  color:white;
+  z-index:100;
+}
+
+/*offer - index*/
+
+#reset-search{
+  margin-left: 47px;
+}
+
+#noresults-found{
+  color: red;
+  margin: 25px 0px 0px 536px;
+}
+
+.search-offer-title{
+  color: #dfd57e;
+  margin: 30px 0px 0px 455px;
+}
+
+.search-criteria{
+  text-align: center;
+  margin: 30px 0px 0px 0px;
+}
+
+.search-criteria button{
+  margin: 20px 0px 0px 0px;
+}
+
+/*seek/index*/
+
+.user-seek-title{
+  color: #dfd57e;
+  margin: 27px 0px 0px 542px;
+}
+
+.table-itineraries-offer{
+    width: 89%;
+    margin-left: 50px;
+    margin-top: 43px;
+    color: wheat;
+    text-align: center;
+}
+
+.table-itineraries-offer tr th{
+  color: #5bae27;
+}
+
+.linkto-register{
+  color: rgb(188, 13, 13);
+}
+ .linkto-register a{
+  color: #dbae25;
+}
+
+
+
+.col-destination input{
+  width: 400px;
+  margin: 12px 0px 0px 425px;
+}
+
+.col-date input{
+  width: 400px;
+  margin: 12px 0px 0px 425px;
+}
+
+.col-free-seats{
+  width: 400px;
+  margin: 12px 0px 0px 425px;
+}
+
+
+
+.bdg-dest{
+  width: 200px;
+  background: #76ab81;
+}
+
+.bdg-date{
+  width: 200px;
+  background: #ceb78d;
+  margin-top: 20px;
+}
+
+.bdg-seats{
+  width: 200px;
+  margin-left: 18px;
+  background: #c6c440;
+  margin-bottom: 20px;
+}
+
+
+.messagepop {
+    /*
+    background-color:#FFFFFF;
+    border:1px solid #999999;
+    cursor:default;
+    */
+    
+    display:none;
+    width: 60%;
+    position:absolute;
+    margin: -408px 0px 0px 154px;
+    z-index: 50;
+    
+    /*
+    margin-top: 15px;
+    position:absolute;
+    text-align:left;
+    width:394px;
+    z-index:50;
+    padding: 25px 25px 20px;
+    */
+  }
+
+  .messagepop form{
+    margin: 0px 0px 0px 150px;
+  }
+
+  .messagepop label{
+      width: 78px;
+  }
+
+  .messagepop form div{
+    /*margin-left: 28px;    
+    margin-top: 27px;*/
+    margin: 20px 0px 0px -47px;
+  }
+
+  .messagepop form input{
+      width: 200px;
+      display: inline-block;
+  }
+
+  .messagepop button{
+    margin: 14px 0px 0px 95px;
+  }
+
+  /*login personal menu*/
+
+  .menu-options{
+    border: 1px solid;
+    width: 267px;
+    position: absolute;
+    background: wheat;
+    display: none;
+  }
+
+
+  
+
+
+
+  .div-itineraries{
+    border:2px solid;
+    width: 53%;
+    float: right;
+    margin: -324px 79px 0px 0px;
+    text-align: center;
+  }
+
+  /*pass recover*/
+
+ 
+
+  .warning-pass{
+    border-color:red;
+    border-width: 2px;
+  }
+  .warning-msg{
+    margin: -73px 0px 0px 288px;
+    width: 205px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    display: none;
+  }
+
+ 
+
+  /*personal content */
+  .div-user-avail{
+    /*border: 1px solid;*/
+    font-size: 14px;
+  }
+
+  .div-user-avail h4{
+    margin: 0px 0px 0px 192px;
+  }
+
+   
+
+ 
+  /*search details*/
+  
+  .badge{
+    width: 150px;
+    cursor: pointer;
+  }
+
+  .input-dest{
+    display: block;
+  }
+  .input-date{
+    display: block;
+  }
+  .input-seats{
+    display: block;
+  }
+
+  .sear{
+    display: none;
+  }
+
+  
+
+  .table-itineraries-offer img{
+    width: 37px;
+    padding: 1px;
+  }
+
+  /*offer index message form*/
+  .message-form{
+    border: 3px solid purple;
+  }
+
+  .new-message-ok{
+    width: 219px;
+  }
+
+  .new-message-ok h5{
+    width: 208px;
+  }
+
+
+
+  /*receive messages*/
+
+  .rec-msg-txtarea{
+    width: 433px;
+    height: 170px;
+  }
+
+  /*seek index*/
+  .totalseek-table{
+    width: 78%;
+    text-align: left;
+  }
+
+  .totalseek-table .pl-demanded{
+    text-align: center;
+  }
+
+  /*receivedMessageDetail*/
+  .message-detail-container{
+    border: 2px solid #dfd57e;
+    color: #dfd57e;
+    width: 496px;
+    padding: 15px;
+    margin-left: 150px;
+    margin-bottom: 30px;
+  }
+
+  .message-detail-container .message-sender{
+    width: 300px;
+  }
+
+  #answer-button{
+    float: right;
+    margin: -41px 0px 0px 0px;
+  }
+
+
+  /*logged user menu -- header.php*/
+  #personal-menu{
+    background: burlywood;
+  }
+
+  #header ul{
+    text-align: left;
+  }
+
+  .menu-options{
+    background: rgb(50, 48, 48);
+    border: 1px solid orange;
+  }
+
+  .menu-options a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-style: italic;
+    color:burlywood;
+    transition: all 300ms ;
+  }
+
+  .menu-options a:hover{
+    color: green;
+  }
+
+  /*car-sharing/user/content*/
+
+  #user-content-title{
+    color: #dfd57e;
+    margin-left: 450px;
+  }
+
+  .user-container{
+    width: 70%;
+    /*border: 1px solid #dfd57e;*/
+    height: auto;
+    margin-left: 173px;
+  }
+
+  .user-container .row{
+    margin-top: 30px;
+  }
+
+  .user-container h5{
+    color:#dfd57e;
+  }
+
+  .user-container label{
+    color: #dfd57e;
+  }
+
+  .user-container input{
+    width: 250px;
+  }
+
+  .div-user-avail h5{
+    margin-bottom: 20px;
+    margin-left: 140px;
+  }
+
+  .div-user-avail form{
+    margin-left: 100px;
+  }
+
+  .div-user-avail button{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 81px;
+  }
+
+  /*car-sharing/itinerate/index*/
+  #my-itinerates-title{
+    color: #dfd57e;
+    margin-left: 520px;
+    margin-bottom: 30px;
+  }
+
+  table.table-myitinerates{
+    width: 60%;
+    margin-left: 170px;
+    border: 1px solid #dfd57e;    
+    text-align: center;
+        
+  }
+
+  .table-myitinerates  thead{
+    border-bottom: 1px solid #dfd57e;
+    color: #dfd57e;
+  }
+
+  .table-myitinerates thead tr th{
+    border-right:  1px solid #dfd57e;
+  }
+
+  .table-myitinerates tbody tr{
+    color: #dfd57e;
+  }
+
+  #my-search-title{
+    color: #dfd57e;
+    margin-left: 520px;
+    margin-top: 40px;
+  }
+
+  table.table-mysearchs {
+    width: 60%;
+    margin-left: 170px;
+    border: 1px solid #dfd57e;
+    text-align: center;
+}
+
+.table-mysearchs  thead{
+  border-bottom: 1px solid #dfd57e;
+  color: #dfd57e;
+}
+
+.table-mysearchs thead tr th{
+  border-right:  1px solid #dfd57e;
+}
+
+.table-mysearchs tbody tr{
+  color: #dfd57e;
+}
+
+/*car-sharing/itinerate/detail&id=?*/
+#itinerate-detail-title{
+  color: #dfd57e;
+    margin-left: 500px;
+    margin-bottom: 50px;
+}
+
+.itinerary-detail-content{
+  width: 100%;
+}
+
+.itineray-detail-form{
+  width: 50%;    
+  float: right;
+  margin-right: 304px;
+  margin-bottom: 42px;
+  
+} 
+
+.itineray-detail-form div{
+  width: 450px;    
+  margin-top: 10px;
+  margin-bottom: 10px;    
+}
+
+.itineray-detail-form label{
+  color: #dfd57e;
+}
+
+.itineray-detail-form button{
+  float: right;
+  margin-right: 340px;
+  margin-top: 15px;
+}
+
+.itineray-detail-form label{
+  width: 100px;
+}
+
+.itineray-detail-form .itdetail{
+  display: inline-block;
+  width: 325px;
+}
+
+/*car-sharing/seek/detail&id=?*/
+#seek-detail-title{
+  color: #dfd57e;
+  margin-left: 514px;
+  margin-top: 26px;
+}
+
+.itinerary-detail-content{
+  margin-top: 30px;
+}
+
+.serch-detail-form{
+  /*border: 1px solid rgb(57, 5, 147);*/
+  width: 60%;
+  margin-top: 40px;
+  float: right;
+  margin-right: 192px;
+  padding: 10px;
+}
+
+.serch-detail-form label{
+  width: 150px;
+  color: #dfd57e;
+}
+
+.serch-detail-form div{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.serch-detail-form button{
+  float: right;
+  margin-right: 434px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.serch-detail-form .skdetail{
+  width: 250px;
+  display: inline-block;
+}
+
+.serch-detail-form input[type="number"]{
+  width: 80px;
+  margin: 0px 0px 0px 155px;
+}
+
+/*car-sharing/user/profil*/
+
+.profil-account-title{
+  margin-left: 364px;
+    color:#dfd57e;
+    margin-bottom: 20px;
+}
+
+.profil-div{
+  width: 100%;
+ 
+}
+
+.profil-form{
+    width: 30%;     
+    color: #dfd57e;
+    margin-left: 400px;
+    margin-bottom: 70px;
+    margin-top: 30px;
+}
+.profil-form label{
+  width: 78px;
+}
+
+.profil-form input{
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.profil-form div{
+  display: flex;
+}
+
+.profil-form button{
+  margin: 20px 0px 0px 192px;
+}
+
+/*car-sharing/user/passwordUpdate*/
+
+.profil-repass-title{
+  color: #dfd57e;
+  margin-left: 500px;
+  margin-bottom: 36px;
+}
+
+.pass-upt-form{
+  width: 40%;   
+  margin-left: 334px;
+  color: #dfd57e;
+}
+
+.pass-upt-form div{
+  width: 439px;   
+  margin: 14px 0px 0px 30px;
+}
+
+.pass-upt-form label{
+  width: 188px;
+}
+
+.pass-upt-form input{
+  width: 232px;
+    display: inline-block;
+    margin: 5px 0px 5px 10px;
+}
+
+.pass-upt-form button[type="submit"]{
+  margin-top: 20px;
+  margin-left: 274px;
+  margin-bottom: 40px;
+  background: rgb(21, 115, 71);
+  color: white;
+  border: none;
+}
+
+
+/*car-sharing/message/index*/
+
+.row-content{
+  margin-bottom: 56px;
+}
+
+.profil-messages-title{
+  color: #dfd57e;
+  margin: 22px 0px 37px 507px;
+}
+
+  .sent-messages{
+    color: #dfd57e;
+  }
+
+  .sent-messages h5{
+    margin-left: 23px;
+    margin-bottom: 25px;
+  }
+
+  .sent-messages table{
+    color: #dfd57e;
+    width: 80%;
+    margin: 0px 0px 0px 20px;
+  }
+
+  .sent-messages .open-btn{
+    background: rgb(21, 115, 71);
+    transition: all 300ms;
+  }
+  .sent-messages .open-btn:hover{
+    background: orange;
+  }
+
+  .received-messages{
+    color: #dfd57e;
+  }
+
+  .received-messages h5{
+    margin-left: 25px;
+    margin-bottom: 25px;
+  }
+
+  .received-messages table{
+    color: #dfd57e;
+    width: 80%;
+    margin: 0px 0px 0px 40px;
+
+  }
+
+  /*car-sharing/message/sentMessageDetail*/
+
+  #detail-message-title{
+    color: #dfd57e;
+    margin-left: 540px;
+    margin-bottom: 32px;
+  }
+
+
+  /*car-sharing/message/receivedMessageDetail*/
+  #received-message-title{
+    color: #dfd57e;
+    margin-left: 540px;
+    margin-bottom: 32px;
+  }
