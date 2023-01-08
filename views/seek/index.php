@@ -21,10 +21,10 @@
                     <td class="pl-demanded"><?=$seek->seats_demanded ?></td>
                     <td>
                     <?php if(isset($_SESSION['identity']) && $_SESSION['identity']->id == $seek->id_usuario):?>
-                            <!--es tu oferta-->
+                            <!--your offer-->
                             <img src="<?= base_url ?>assets/images/user.png" alt="user logged">
                         <?php elseif(isset($_SESSION['identity'])) :?>   
-                            <!--contacto--> 
+                            <!--contact--> 
                             <a href="#" class="contact" value="<?= $seek->id_usuario ?>"><img src="<?= base_url ?>assets/images/contact.png" alt="user contact"></a>
                         <?php elseif(!isset($_SESSION['identity'])):?>    
                             <label class="linkto-register">members only,<a href="<?= base_url ?>user/register"> be member</a></label>
