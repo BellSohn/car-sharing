@@ -1,16 +1,9 @@
 $(document).ready(function(){
     
-    $('.to-login').on('click',function(){        
-        //$('.messagepop').slideFadeToggle();
-        $('#exampleModalCenter').slideFadeToggle();
+    $('.to-login').on('click',function(){      
+       $('#exampleModalCenter').slideFadeToggle();
     });
-
-    /*function deselected(e){
-        $('.pop').slideFadeToggle(function(){
-            e.removeClass('selected');
-        });
-    }*/
-
+    
     $('.close').click(function(){
         $('.messagepop').css('display','none');
     });
@@ -26,25 +19,22 @@ $(document).ready(function(){
 
      /*With this code I conceal the personal menu,once you click outside it */
       document.addEventListener("click",function(e){
-         var a = document.getElementById('personal-menu');
-         //console.log("haces click");
+         var a = document.getElementById('personal-menu');         
          var click = e.target;
-         //console.log(click);
-         if(click != a && $('.menu-options').css('display','block')){
-             //console.log("click fuera");
+         
+         if(click != a && $('.menu-options').css('display','block')){             
              $('.menu-options').css('display','none');
          }         
      });
 
      /*password restore */
 
-     $('.pass-confirm').on('change',function(){
-         //console.log("confirmation!");
+     $('.pass-confirm').on('change',function(){         
          var pass = $('.pass-field').val();
          var pass_new = $('.pass-new').val();
          var pass_confirm = $('.pass-confirm').val();
          if(pass_new !== pass_confirm){
-            //console.log("dont match!");
+            
             $('.warning-msg').css('display','block');
             $('.pass-confirm').addClass('warning-pass');
 
@@ -58,41 +48,30 @@ $(document).ready(function(){
      /* trip search  */
 
      $('.btn-search').on('click',function(){
-         //alert("Viernes!");
-         var destination = $('.sear-dest').val();
-         //$('.search-results').text(destination);
-         //console.log(destination);
+         
+         var destination = $('.sear-dest').val();        
+         
          $.ajax({          
             url:'ajaxSearchValue',            
             method:'POST',  
             //dataType:'json',           
             data:{'dest':destination},
             success:function(result,status,xhr){
-                //console.log(result);
-                $('.search-results').html(result);
                 
-                //var jsonData = JSON.parse(response);
-                //console.log(jsonData);
-                //$('.search-results').text(data);
-                
-                    
-                    //console.log(dest);
-                //$('.search-results').text(dest);
+                $('.search-results').html(result);                                      
+                                
             },
-            error:function(xhr,status,error){
-                /*console.log(request);
-                console.log(request.status);
-                console.log(error);*/
+            error:function(xhr,status,error){                
                 $('.search-results').html(error);
             }
              
          });
      });
 
-     //if(window.document.u)
+     
      let url = window.location.pathname;
      let urlSplit = url.split("/");
-     console.log(urlSplit[3] + " "+urlSplit[4]);
+     
      if(urlSplit[3] == 'offer' && urlSplit[4] == 'index'){
         $('.div-footer').css('margin-top',80);
      }else if(urlSplit[3] == 'offer' && urlSplit[4] == 'offerSearch'){
@@ -104,33 +83,18 @@ $(document).ready(function(){
         $('.div-footer').css('margin-top',80);
      }
 
-     /* ofer index.php */
-     /*
-     $('.bdg-dest').click(function(){         
-         $('.input-dest').css('display','block');
-     });
-
-     $('.bdg-date').click(function(){
-         $('.input-date').css('display','block');
-     });
-
-     $('.bdg-seats').click(function(){
-         $('.input-seats').css('display','block');
-     });
-     */
+     /* ofer index.php */    
      
-     $('#reset-search').click(function(){
-        //alert("joder!"); 
+     $('#reset-search').click(function(){        
         window.location.replace("http://localhost/master-php/car-sharing/offer/index");
      });
 
      $('.input-seats').on('change',function(){
-         //alert("cagon to!");
+         
          var destination = $('.input-dest').val();
          var date = $('.input-date').val();
-         //console.log(date);
-         if(destination == "" && date == "" ){
-             //console.log("bloqueo");
+         
+         if(destination == "" && date == "" ){             
              $('.btn-search').prop('disabled',true);
          }else{
              $('.btn-search').prop('disabled',false);
@@ -141,23 +105,7 @@ $(document).ready(function(){
      
      $('.contact').on('click',function(){
 
-        $('#exampleModal').modal('toggle');
-        /*
-         let itineraryUserId = $(this).attr("value");         
-         let variables = JSON.stringify({
-            userId:itineraryUserId
-         });
-              
-         fetch("AjaxUserNameCall",{
-             method:'POST',
-             body:variables,
-             headers:{"Content-Type":"application/json; charset=UTF-8"}
-         })
-         .then(response => response.json())
-         .then(datos => console.log(datos));      
-                
-      
-        */
+        $('#exampleModal').modal('toggle');       
         var userItinerary = $(this).attr('value');
 
          
@@ -166,13 +114,8 @@ $(document).ready(function(){
             method:'POST',
             data:{'iduser':userItinerary},
             success:function(result,status,xhr){
-                res = JSON.parse(result);
-                //res = result;
-                //console.log("result: " + res.name);
-                console.log(res);
-                //$('#contact_info').html(res.name);
-                $('#contact_info').html(res);
-               //$('#exampleModalLabel').html(result);               
+                res = JSON.parse(result);                              
+                $('#contact_info').html(res);               
             },
             error:function(xhr,status,error){
 
@@ -183,17 +126,12 @@ $(document).ready(function(){
         
      });
 
-     $('#answer-button').on('click',function(){
-         //alert("Cojon!");
+     $('#answer-button').on('click',function(){         
          $('#answerModal').modal('toggle');
 
      });
 
-     /*let esta = document.querySelector("#answer-button");
-     esta.addEventListener("click",function(){
-        $('#answerModal').modal('toggle');
-        //alert("mierda!");
-     });*/
+     
 
      
      
