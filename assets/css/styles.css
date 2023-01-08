@@ -195,27 +195,14 @@ a.selected{
 }
 
 
-.messagepop {
-    /*
-    background-color:#FFFFFF;
-    border:1px solid #999999;
-    cursor:default;
-    */
+.messagepop {    
     
     display:none;
     width: 60%;
     position:absolute;
     margin: -408px 0px 0px 154px;
-    z-index: 50;
-    
-    /*
-    margin-top: 15px;
-    position:absolute;
-    text-align:left;
-    width:394px;
-    z-index:50;
-    padding: 25px 25px 20px;
-    */
+    z-index: 50;    
+   
   }
 
   .messagepop form{
@@ -227,8 +214,7 @@ a.selected{
   }
 
   .messagepop form div{
-    /*margin-left: 28px;    
-    margin-top: 27px;*/
+   
     margin: 20px 0px 0px -47px;
   }
 
@@ -284,8 +270,7 @@ a.selected{
  
 
   /*personal content */
-  .div-user-avail{
-    /*border: 1px solid;*/
+  .div-user-avail{   
     font-size: 14px;
   }
 
@@ -410,8 +395,7 @@ a.selected{
   }
 
   .user-container{
-    width: 70%;
-    /*border: 1px solid #dfd57e;*/
+    width: 70%;   
     height: auto;
     margin-left: 173px;
   }
@@ -556,8 +540,7 @@ a.selected{
   margin-top: 30px;
 }
 
-.serch-detail-form{
-  /*border: 1px solid rgb(57, 5, 147);*/
+.serch-detail-form{  
   width: 60%;
   margin-top: 40px;
   float: right;
