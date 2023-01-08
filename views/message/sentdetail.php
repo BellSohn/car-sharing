@@ -7,8 +7,7 @@
              value="<?=$dataUser->nick ?> (<?=$dataUser->name ." ". $dataUser->surname?>)" disabled />
         </div>
         <div>
-            <label>message text</label>
-            <!--<input type="text" class="form-control" value="<?= $messageText ?>" disabled />-->
+            <label>message text</label>            
             <textarea class="rec-msg-txtarea form-control" disabled>
                 <?= $messageText ?>
             </textarea>
