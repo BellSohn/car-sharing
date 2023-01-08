@@ -6,15 +6,11 @@ require_once 'models/Seek.php';
 
 class UserController{
 
-
     public function register(){
-
-
         require_once 'views/user/register.php';
     }
 
     public function profil(){
-
         require_once 'views/user/profil.php';
     }
 
@@ -30,7 +26,7 @@ class UserController{
 
     public function saveNewSearch(){
         if(isset($_POST)){
-            //var_dump($_POST);
+            
             $userId = isset($_POST['userId']) ? $_POST['userId'] : false;
             $depart_date = isset($_POST['depart_date']) ? $_POST['depart_date'] :false;
             $start_place = isset($_POST['start_place']) ? $_POST['start_place'] :false;
@@ -46,8 +42,7 @@ class UserController{
                     $mySeek->setEndPlace($end_place);
                     $mySeek->setSeatsDemanded($seats_demanded);
                     $mySeek->setUserId($userId);
-
-                    //var_dump($mySeek);die();
+                    
                     $result = $mySeek->saveSeek();
 
                     if($result){
@@ -67,9 +62,8 @@ class UserController{
     }
 
     public function saveNewItinerary(){
-        if(isset($_POST)){
-            //var_dump($_POST);
-            //die();
+        if(isset($_POST)){            
+            
             $departDate = isset($_POST['depart-date']) ? $_POST['depart-date'] : false;
             $departTime = isset($_POST['depart-time']) ? $_POST['depart-time'] : false;
             $departplace = isset($_POST['depart-place']) ? $_POST['depart-place'] :false;
@@ -108,25 +102,18 @@ class UserController{
         header("Location:".base_url.'user/content');
     }
 
-    /*
-     public function getUserItineraries(){
-        echo "cojones";
-        var_dump($_POST['userid']);
-        die();
-    }*/
+   
 
     
 
     public function updatePassword(){
         if($_POST){
-            //echo "llegan datos";
-            //die();
+            
             $id = $_SESSION['identity']->id;
             $password = $_POST['password'] ? $_POST['password'] :false;
             $newPass = $_POST['newpass'] ? $_POST['newpass'] : false;
             $passConfirm = $_POST['confirmpass'] ? $_POST['confirmpass'] :false;
-           // var_dump("id : ".$id."password : ".$password);
-            //die();
+           
             if($password && $newPass && $passConfirm){
                 $usuario = new Usuario();
                 $usuario->setPassword($passConfirm);
@@ -150,8 +137,7 @@ class UserController{
     public function updatePersoData(){
 
         if(isset($_POST)){
-           // var_dump($_POST);
-            //die();
+           
             $id = $_POST['userId'] ? $_POST['userId'] :false;
             $name = $_POST['name'] ? $_POST['name'] : false;
             $surname = $_POST['surname'] ? $_POST['surname'] :false;
@@ -196,10 +182,10 @@ class UserController{
 
     public function login(){
         if(isset($_POST)){
-        //echo "seguimos con el login";
+        
         $email =$_POST['email'] ? $_POST['email'] : false;
         $password = $_POST['password'] ? $_POST['password'] :false;
-        //echo("email : ".$email. " --password : ".$password);
+        
             
             if($email && $password){
 
@@ -209,7 +195,7 @@ class UserController{
                 $usuario->setPassword($password);
 
                 $loguedUser = $usuario->login();
-                //var_dump($loguedUser);
+                
                 if($loguedUser && is_object($loguedUser)){
                     $_SESSION['identity'] = $loguedUser;
                     if($loguedUser->role == 'admin'){
@@ -234,7 +220,7 @@ class UserController{
     public function saveUser(){
 
         if(isset($_POST)){
-            //var_dump($_POST);
+            
             $name = isset($_POST['name']) ? $_POST['name'] : false;
             $surname = isset($_POST['surname']) ? $_POST['surname']:false;
             $nick = isset($_POST['nick']) ? $_POST['nick']:false;
@@ -242,7 +228,7 @@ class UserController{
             $email = isset($_POST['email']) ? $_POST['email'] : false;
             $password = isset($_POST['password']) ? $_POST['password'] :false;
             $role = isset($_POST['role']) ? $_POST['role'] : false;
-            //$role = 'user';
+            
 
             if($name && $surname && $nick && $phone && $email && $password && $role){
                 
