@@ -5,31 +5,23 @@ require_once 'models/Seek.php';
 class SeekController{
 
     public function index(){
-
         
         $seekObject = new Seek();
         $allAvailableSeek = $seekObject->allSeek();
         $numRows = $allAvailableSeek->num_rows;
-        //echo $allAvailableSeek->num_rows;
-       //die();
         
-
-
-
         require_once "views/seek/index.php";
     }
 
 
 
-public function detail(){
+    public function detail(){
 
     if(isset($_GET['id'])){
-        $seekId = $_GET['id'];
-        //echo "seek id es : ".$seekId;
-        //die();
+        
+        $seekId = $_GET['id'];        
         $detail = new Seek();
-        $mySeekDetail = $detail->seekDetail($seekId);
-        //var_dump($mySeekDetail);die();
+        $mySeekDetail = $detail->seekDetail($seekId);        
         
     }
 
@@ -40,7 +32,7 @@ public function detail(){
 public function updateSeek(){
 
     if(isset($_POST)){
-        //var_dump($_POST);
+        
         $seekId = isset($_POST['seekId']) ? $_POST['seekId'] :false;
         $departDate = isset($_POST['depart_date']) ? $_POST['depart_date'] : false;
         $startPlace = isset($_POST['start_place']) ? $_POST['start_place'] : false;
