@@ -12,17 +12,13 @@ class ItinerateController{
         $seek = new Seek();
 
         $userId = $_SESSION['identity']->id;
-        //echo "userId : ".$userId;
+        
         $myitineraries = $itinerario->getUserItineraries($userId);
-        //var_dump($myitineraries);die();
+        
         $miSeeks = $seek->getSeekPerUser($userId);
         $seekRows = $miSeeks->num_rows;
-        $numRows = $myitineraries->num_rows;
-        //var_dump($myitineraries->num_rows);
-        //die();
-
-
-        //var_dump("estas en getUserItineraries");
+        $numRows = $myitineraries->num_rows;       
+                
        require_once 'views/itinerate/index.php';
 
     }
@@ -44,7 +40,7 @@ class ItinerateController{
 
     public function updateItinerate(){
         if($_POST){
-            //var_dump($_POST);
+            
            $itId = isset($_POST['itid']) ? $_POST['itid'] : false;
            $departDate = isset($_POST['depart_date']) ? $_POST['depart_date'] : false;
            $departTime = isset($_POST['depart_time']) ? $_POST['depart_time'] : false;
@@ -53,7 +49,7 @@ class ItinerateController{
            $freeSeats = isset($_POST['free_seats']) ? $_POST['free_seats'] : false;
 
            if($itId && $departDate && $departTime && $departPlace && $endPlace && $freeSeats){
-//var_dump("id : ". $itId."dep date :".$departDate."dep time ".$departTime."dep plc :".$departPlace."end plc : ".$endPlace."fse :".$freeSeats);die();
+
             //create the object
             $itinerate = new Itinerario();
             
@@ -63,7 +59,7 @@ class ItinerateController{
             $itinerate->setEndPlace($endPlace);
             $itinerate->setFreeSeats($freeSeats);
             $itinerate->setId($itId);
-            //var_dump($itinerate);die();
+            
             $update = $itinerate->updateItinerary();
 
             if($update){
