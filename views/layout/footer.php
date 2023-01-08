@@ -1,5 +1,5 @@
 </div>
-<!--este es cierre div container-->
+<!--close of div container-->
 <div class="div-footer">
     <!--PIE DE PAGINA-->
     <footer>
