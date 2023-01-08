@@ -11,8 +11,7 @@ class MessageController{
             $message = new Message();
             $messageSet = $message->sentMessagesPerUser($userId);
             $receivedMessages = $message->receivedMessagePerUser($userId);
-            if($messageSet){
-                //var_dump($messageSet);die();   
+            if($messageSet){                
                 $numRows = $messageSet->num_rows;                
             }
             if($receivedMessages){
@@ -25,20 +24,19 @@ class MessageController{
     public function sentMessageDetail(){
 
         if($_POST){
-            //var_dump($_POST);
+            
             $messageId = isset($_POST['messageId']) ? $_POST['messageId'] : false;
             $userDestId = isset($_POST['userDestId']) ? $_POST['userDestId'] : false;
             $messageText = isset($_POST['messageTxt']) ? $_POST['messageTxt'] : false;
 
             if($messageId && $userDestId){
-                 //get the message text
-                 $message = new Message();
-                  //$messageText = $message->getMessageText($messageId);
-                  //var_dump($messageText->fetch_object());die();
+                 
+                 $message = new Message();                 
+                  
                   //get data from User who sent the message
                     $userDestination = new Usuario();
                     $dataUser = $userDestination->getDataUser($userDestId);
-                    //var_dump($dataUser->nick);die();
+                    
             }else{
                 header('Location:'.base_url.'message/index');     
             }
@@ -53,23 +51,22 @@ class MessageController{
     public function receivedMessageDetail(){
 
         if($_POST){
-            //echo "vas a mostrar detalle mensaje recibido";
-            //var_dump($_POST);
+            
+            //echo "detail of received message";
+            
             $messageId = isset($_POST['messageId']) ? $_POST['messageId'] : null;
             $userSentId = isset($_POST['userSentId']) ? $_POST['userSentId'] : null;            
             
             if($messageId && $userSentId){
 
-               //datos del usuario que envia el mensaje
+               //data of the user who sents the message
                 $userSent = new Usuario();
                 $userSentData = $userSent->getDataUser($userSentId);
 
-            //recibir texto del mensaje
+            //receive the message text
                 $receivedMessage = new Message();
-                $receivedMessageText = $receivedMessage->getMessageText($messageId)->fetch_object();
-                //var_dump($receivedMessageText);die();
-               
-                //die();
+                $receivedMessageText = $receivedMessage->getMessageText($messageId)->fetch_object();              
+                              
 
             }else{
                 header("Location:".base_url."message/index");
@@ -86,10 +83,10 @@ class MessageController{
     }
 
     public function deleteSentMessage(){
+        
         if($_POST){
-            //var_dump($_POST);die();
+            
             $messageId = $_POST['messageId'];
-            //var_dump($messageId);
             $messageToDelete = new Message();
             $result = $messageToDelete->deleteMessage($messageId);
             if($result){
@@ -107,9 +104,9 @@ class MessageController{
     public function deleteReceivedMessage(){
 
         if($_POST){
-            //var_dump($_POST);
+            
             $messageId = isset($_POST['messageId']) ? $_POST['messageId'] : null;
-            //echo $messageId;
+            
             $messageToDelete = new Message();
             $result = $messageToDelete->deleteMessage($messageId);
             if($result){
@@ -164,7 +161,7 @@ class MessageController{
             $_SESSION['saveAnswerMessage'] = 'failed';
         }
         header("Location:".base_url."message/receivedMessageDetail");
-        //header("Location:".base_url."offer/index");
+        
     }
 
 
