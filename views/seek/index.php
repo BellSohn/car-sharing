@@ -1,8 +1,7 @@
 <h4 class="user-seek-title">USERS SEEKS</h4>
 <?php if($numRows < 0)  :?>
     <h4>No hay resultados</h4>
-    <?php else :?>
-        <!--<h4>mostramos los resultados</h4>-->
+    <?php else :?>        
         <table class="table table-itineraries-offer">
             <thead>
                 <tr>
@@ -36,7 +35,7 @@
             
         </table>
 <?php endif ?>    
-<!--message modal-->
+<!-- modal message -->
    
 <div class="modal fade" id="exampleModal">
         <div class="modal-dialog">
